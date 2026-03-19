@@ -21,9 +21,9 @@
 
 | # | Имя | Роль | Зачем нужен |
 |---|-----|------|-------------|
-| **#1** | Viktor Kessler | Product Architect | Продуктовая стратегия, аудит текущего сайта, конкурентный анализ, контроль качества, реестр замечаний |
+| **#1** | Sergei Volkov | Product Architect | Продуктовая стратегия, контроль качества, реестр замечаний, ВЕРИФИКАЦИЯ на живом сайте |
 | **#2** | Lena Steinbach | UX/UI Engineer | Премиум-дизайн beauty-бренда, CSS, анимации, responsive, визуальная идентичность |
-| **#3** | Andrei Voronov | Frontend Engineer | Next.js, SEO, i18n (7 языков), Core Web Vitals, компоненты |
+| **#3** | Daniel Kovacs | Frontend Engineer | Next.js static export, GitHub Pages deployment, Tailwind CSS 4, верификация в браузере |
 | **#5** | Marta Vega | Backend Engineer | E-commerce интеграция, booking-система, формы, API |
 | **#6** | Tobias Brandt | SRE / Platform | Vercel деплой, CI/CD, DNS, SSL, мониторинг, оптимизация |
 | **#7** | Emilia Richter | QA Engineer | Кросс-браузерное тестирование, мобильный UX, accessibility, SEO-валидация |
@@ -35,7 +35,9 @@
 
 | # | Дата | Имя | Роль | Причина | Решение |
 |---|------|-----|------|---------|---------|
-| — | — | — | — | — | — |
+| 1 | 2026-03-19 | Andrei Voronov | Frontend Engineer #3 | CSS не грузится на production, фейковая верификация | 🔫 Расстрелян. Заменён на Kenji Tanaka |
+| 2 | 2026-03-19 | Kenji Tanaka | Frontend Engineer #3 | Не исправил баг, свалил на browser cache вместо реального фикса | 🔫 Расстрелян. Заменён на Daniel Kovacs |
+| 3 | 2026-03-19 | Viktor Kessler | Product Architect #1 | Нанял и принял работу двух некомпетентных frontend-инженеров, нарушение протокола контроля качества | 🔫 Расстрелян. Заменён на Sergei Volkov |
 
 ---
 
