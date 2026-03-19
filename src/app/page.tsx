@@ -90,74 +90,60 @@ export default function HomePage() {
   return (
     <>
       {/* ── 1. HERO ───────────────────────────────────────────────── */}
-      <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
-        {/* Background image */}
-        <img
-          src={img("/images/hero-banner.jpg")}
-          alt="Studio of Glamour — Premium Wimpernverlängerung München"
-          className="w-full h-full object-cover absolute inset-0"
-        />
+      <section className="bg-cream py-16 md:py-20 md:min-h-[70vh] flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid md:grid-cols-[55fr_45fr] gap-8 lg:gap-12 items-center">
+            {/* Left — Text (DOM first = mobile first = CTA above fold) */}
+            <div>
+              <FadeIn delay={0.1}>
+                <p className="text-gold font-body text-sm uppercase tracking-[0.3em] mb-6">
+                  Premium Lash Studio · München
+                </p>
+              </FadeIn>
 
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/60 to-charcoal/70" />
+              <FadeIn delay={0.25}>
+                <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-charcoal leading-tight mb-6">
+                  Dein Traumblick
+                  <br />
+                  <span className="text-gold-dark italic">beginnt hier.</span>
+                </h1>
+              </FadeIn>
 
-        {/* Content */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <FadeIn delay={0.1}>
-            <p className="text-gold-light font-body text-sm uppercase tracking-[0.3em] mb-6">
-              Premium Lash Studio · München
-            </p>
-          </FadeIn>
+              <FadeIn delay={0.4}>
+                <p className="text-charcoal/70 font-body text-lg md:text-xl mb-10 max-w-lg">
+                  Premium Wimpernverlängerung in München — für deinen natürlichen, strahlenden Blick.
+                </p>
+              </FadeIn>
 
-          <FadeIn delay={0.25}>
-            <h1
-              className="font-heading text-5xl md:text-7xl text-white leading-tight mb-6"
-              style={{ textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 2px 12px rgba(0,0,0,0.4)" }}
-            >
-              Dein Traumblick
-              <br />
-              <span
-                className="text-gold-light italic"
-                style={{ textShadow: "0 1px 4px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.5)" }}
-              >
-                beginnt hier.
-              </span>
-            </h1>
-          </FadeIn>
-
-          <FadeIn delay={0.4}>
-            <p
-              className="text-white font-body text-lg md:text-xl mb-10 max-w-xl mx-auto"
-              style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7), 0 2px 10px rgba(0,0,0,0.3)" }}
-            >
-              Premium Wimpernverlängerung in München — für deinen natürlichen, strahlenden Blick.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={0.55}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/booking"
-                className="btn-gold rounded-full px-8 py-4 font-body font-medium text-base inline-block"
-              >
-                Termin buchen
-              </Link>
-              <Link
-                href="/services"
-                className="rounded-full px-8 py-4 font-body font-medium text-base border border-white/40 text-white hover:bg-white/10 transition-colors inline-block"
-              >
-                Leistungen ansehen
-              </Link>
+              <FadeIn delay={0.55}>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/booking"
+                    className="btn-gold rounded-full px-8 py-4 font-body font-medium text-base inline-block text-center"
+                  >
+                    Termin buchen
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="rounded-full px-8 py-4 font-body font-medium text-base border border-gold/40 text-gold-dark hover:bg-gold/5 transition-colors inline-block text-center"
+                  >
+                    Leistungen ansehen
+                  </Link>
+                </div>
+              </FadeIn>
             </div>
-          </FadeIn>
-        </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
-          <span className="font-body text-xs tracking-widest uppercase">Entdecken</span>
-          <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+            {/* Right — Image */}
+            <FadeIn delay={0.3} direction="right">
+              <div className="w-full overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src={img("/images/hero-banner.jpg")}
+                  alt="Studio of Glamour — Premium Wimpernverlängerung München"
+                  className="w-full object-cover aspect-[4/5]"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
