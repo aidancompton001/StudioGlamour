@@ -99,7 +99,7 @@ export default function HomePage() {
         />
 
         {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/60 to-charcoal/70" />
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -110,15 +110,26 @@ export default function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.25}>
-            <h1 className="font-heading text-5xl md:text-7xl text-white leading-tight mb-6">
+            <h1
+              className="font-heading text-5xl md:text-7xl text-white leading-tight mb-6"
+              style={{ textShadow: "0 1px 3px rgba(0,0,0,0.8), 0 2px 12px rgba(0,0,0,0.4)" }}
+            >
               Dein Traumblick
               <br />
-              <span className="text-gold-light italic">beginnt hier.</span>
+              <span
+                className="text-gold-light italic"
+                style={{ textShadow: "0 1px 4px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.5)" }}
+              >
+                beginnt hier.
+              </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="text-white/80 font-body text-lg md:text-xl mb-10 max-w-xl mx-auto">
+            <p
+              className="text-white font-body text-lg md:text-xl mb-10 max-w-xl mx-auto"
+              style={{ textShadow: "0 1px 3px rgba(0,0,0,0.7), 0 2px 10px rgba(0,0,0,0.3)" }}
+            >
               Premium Wimpernverlängerung in München — für deinen natürlichen, strahlenden Blick.
             </p>
           </FadeIn>
