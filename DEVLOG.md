@@ -35,6 +35,24 @@
   - Максимум 15 строк на запись
 -->
 
+### [S006] — 2026-03-19 — Fix: image basePath + CI build
+
+**Роли:** #3 Daniel Kovacs, #14 Hans Landa (полный ревью 10 находок)
+**Статус:** завершено
+
+**Что сделано:**
+- Корень: `<img src="/images/...">` не получает basePath от Next.js
+- Создан `img()` хелпер с нормализацией leading slash
+- 5 находок Ланды исправлены (2 HIGH, 2 MEDIUM, 1 LOW)
+- Тест для `img()` — 24 теста всего, все проходят
+- Fix: zustand + framer-motion отсутствовали в package.json → CI build fail
+
+**Верификация:** curl → hero-banner.jpg 200 OK (160KB), studio-work-1.jpg 200 OK (106KB)
+
+**Артефакты:** `src/lib/utils.ts`, 4 page.tsx, `src/__tests__/utils.test.ts`
+
+---
+
 ### [S005] — 2026-03-19 — Реальные фото клиентки на всех страницах
 
 **Роли:** #2 Lena Steinbach (UX/UI)
