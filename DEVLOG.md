@@ -35,6 +35,22 @@
   - Максимум 15 строк на запись
 -->
 
+### [S008] — 2026-03-19 — Hero: split layout (текст лева, image справа)
+
+**Роли:** #2 Lena Steinbach, #14 Landa (11 находок, все адресованы)
+**Статус:** завершено
+
+**Что сделано:**
+- Hero: full-bleed → split grid 55/45 на cream фоне
+- Mobile: текст+CTA сверху (above fold), image снизу
+- Удалены: overlay, textShadow, scroll indicator "Entdecken"
+- Gold italic: gold-light → gold-dark (WCAG contrast fix)
+- Secondary button: white → gold-dark border
+
+**Артефакты:** `src/app/page.tsx`
+
+---
+
 ### [S007] — 2026-03-19 — Custom domain + Hero readability fix
 
 **Роли:** #2 Lena Steinbach, #3 Daniel Kovacs, #14 Landa (6 находок)
