@@ -49,10 +49,12 @@ body {
   box-shadow: 0 4px 20px rgba(184, 149, 106, 0.4);
 }
 
-/* Section fade-in placeholder (enhanced by Framer Motion) */
-.section-fade {
-  opacity: 0;
-  transform: translateY(30px);
+/* Framer Motion fallback: content visible before JS hydration */
+/* Once JS loads, Framer Motion takes over and animates properly */
+[style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Scrollbar styling */
