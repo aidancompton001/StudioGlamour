@@ -35,6 +35,21 @@
   - Максимум 15 строк на запись
 -->
 
+### [S010] — 2026-03-19 — Fix: мобильная версия — CSS + visibility
+
+**Роли:** #3 Daniel Kovacs, #14 Landa (6 находок: 2 P0, 2 P1, 2 P2)
+**Статус:** завершено
+
+**Что сделано:**
+- Root cause 1: React 19 `data-precedence` блокирует CSS до JS hydration на Safari iOS
+- Root cause 2: Framer Motion рендерит все секции с `opacity:0` — контент невидим без JS
+- Fix 1: post-build скрипт добавляет plain `<link>` без data-precedence (10/10 HTML)
+- Fix 2: CSS fallback `[style*="opacity:0"] { opacity:1 !important }` в globals.css
+
+**Артефакты:** `scripts/fix-css-precedence.mjs`, `src/app/globals.css`, `package.json`
+
+---
+
 ### [S009] — 2026-03-19 — Fix: hero image crop — лого JR видно полностью
 
 **Роли:** #3 Daniel Kovacs, #14 Landa (5 находок)
