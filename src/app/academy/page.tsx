@@ -4,6 +4,7 @@ import { courses } from "@/lib/data/products";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useToast } from "@/components/ui/Toast";
 import Link from "next/link";
+import { img } from "@/lib/utils";
 
 const featureBadges = ["Kleine Gruppen", "Zertifikat", "Starter-Kit inklusive"];
 
@@ -15,11 +16,11 @@ const includedItems = [
 ];
 
 const courseImages = [
-  { src: "/images/cat-academy.jpg", alt: "Lash Academy Schulung" },
-  { src: "/images/studio-work-1.jpg", alt: "Classic Wimpernverlängerung Kurs" },
-  { src: "/images/studio-work-2.jpg", alt: "Volumen Wimpern Schulung" },
-  { src: "/images/studio-work-3.jpg", alt: "Lash Lifting Kurs" },
-  { src: "/images/studio-work-4.jpg", alt: "Profi Lash Schulung" },
+  { src: img("/images/cat-academy.jpg"), alt: "Lash Academy Schulung" },
+  { src: img("/images/studio-work-1.jpg"), alt: "Classic Wimpernverlängerung Kurs" },
+  { src: img("/images/studio-work-2.jpg"), alt: "Volumen Wimpern Schulung" },
+  { src: img("/images/studio-work-3.jpg"), alt: "Lash Lifting Kurs" },
+  { src: img("/images/studio-work-4.jpg"), alt: "Profi Lash Schulung" },
 ];
 
 export default function AcademyPage() {

@@ -6,6 +6,7 @@ import { products, productCategories } from "@/lib/data/products";
 import { useCartStore } from "@/lib/store/cart";
 import { useToast } from "@/components/ui/Toast";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { img } from "@/lib/utils";
 
 // Human-readable label for a category
 function categoryLabel(id: string) {
@@ -96,7 +97,7 @@ export default function ShopPage() {
                 <div className="relative">
                   <div className="h-48 w-full rounded-t-2xl overflow-hidden">
                     <img
-                      src={`/images/product-${products.indexOf(product) + 1}.jpg`}
+                      src={img(`/images/product-${products.indexOf(product) + 1}.jpg`)}
                       alt={product.name}
                       className="w-full h-full object-cover"
                       loading="lazy"

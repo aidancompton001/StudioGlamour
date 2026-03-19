@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { img } from "@/lib/utils";
 
 const services = [
   {
@@ -9,7 +10,7 @@ const services = [
     description: "Die zeitlose 1:1 Technik für einen natürlichen, definierten Blick.",
     price: "ab 100 €",
     tag: "Klassisch",
-    image: "/images/studio-work-1.jpg",
+    image: img("/images/studio-work-1.jpg"),
     imageAlt: "Classic Wimpernverlängerung",
   },
   {
@@ -17,7 +18,7 @@ const services = [
     description: "Maximales Volumen mit feinen Fächern für dramatische Augen.",
     price: "ab 120 €",
     tag: "Volumen",
-    image: "/images/studio-work-2.jpg",
+    image: img("/images/studio-work-2.jpg"),
     imageAlt: "Volumen Wimpernverlängerung",
   },
   {
@@ -25,7 +26,7 @@ const services = [
     description: "Dauerhaft aufgeweckte Augen – ganz ohne Extensions.",
     price: "ab 65 €",
     tag: "Lifting",
-    image: "/images/studio-work-3.jpg",
+    image: img("/images/studio-work-3.jpg"),
     imageAlt: "Lash Lifting Behandlung",
   },
 ];
@@ -92,7 +93,7 @@ export default function HomePage() {
       <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
         {/* Background image */}
         <img
-          src="/images/hero-banner.jpg"
+          src={img("/images/hero-banner.jpg")}
           alt="Studio of Glamour — Premium Wimpernverlängerung München"
           className="w-full h-full object-cover absolute inset-0"
         />
@@ -295,13 +296,13 @@ export default function HomePage() {
           {/* Instagram grid: 3 cols on mobile, 6 cols on desktop */}
           <div className="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-3 mb-10">
             {[
-              { src: "/images/studio-work-1.jpg", alt: "Lash Work — Studio of Glamour" },
-              { src: "/images/studio-work-2.jpg", alt: "Volumen Wimpern — Studio of Glamour" },
-              { src: "/images/studio-work-3.jpg", alt: "Lash Lifting — Studio of Glamour" },
-              { src: "/images/studio-work-4.jpg", alt: "Wimpernverlängerung München" },
-              { src: "/images/hero-banner-2.jpg", alt: "Premium Lash Studio München" },
-              { src: "/images/hero-banner-3.jpg", alt: "Beauty Studio of Glamour" },
-            ].map((img, i) => (
+              { src: img("/images/studio-work-1.jpg"), alt: "Lash Work — Studio of Glamour" },
+              { src: img("/images/studio-work-2.jpg"), alt: "Volumen Wimpern — Studio of Glamour" },
+              { src: img("/images/studio-work-3.jpg"), alt: "Lash Lifting — Studio of Glamour" },
+              { src: img("/images/studio-work-4.jpg"), alt: "Wimpernverlängerung München" },
+              { src: img("/images/hero-banner-2.jpg"), alt: "Premium Lash Studio München" },
+              { src: img("/images/hero-banner-3.jpg"), alt: "Beauty Studio of Glamour" },
+            ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <a
                   href="https://instagram.com/studio.of.glamour"
@@ -310,8 +311,8 @@ export default function HomePage() {
                   className="block aspect-square rounded-xl overflow-hidden group"
                 >
                   <img
-                    src={img.src}
-                    alt={img.alt}
+                    src={item.src}
+                    alt={item.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />

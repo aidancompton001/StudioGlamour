@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { img } from "@/lib/utils";
 
 // ── Animated counter ────────────────────────────────────────────────────────
 
@@ -67,12 +68,12 @@ function AnimatedCounter({ target, suffix = "", label, delay = 0 }: CounterProps
 // ── Gallery images ────────────────────────────────────────────────────────────
 
 const galleryImages = [
-  { src: "/images/studio-work-1.jpg", alt: "Lash Work — Studio of Glamour" },
-  { src: "/images/studio-work-2.jpg", alt: "Volumen Wimpernverlängerung München" },
-  { src: "/images/studio-work-3.jpg", alt: "Lash Lifting Ergebnis" },
-  { src: "/images/studio-work-4.jpg", alt: "Wimpernverlängerung Close-up" },
-  { src: "/images/hero-banner-2.jpg", alt: "Studio of Glamour München" },
-  { src: "/images/hero-banner-3.jpg", alt: "Premium Beauty Studio München" },
+  { src: img("/images/studio-work-1.jpg"), alt: "Lash Work — Studio of Glamour" },
+  { src: img("/images/studio-work-2.jpg"), alt: "Volumen Wimpernverlängerung München" },
+  { src: img("/images/studio-work-3.jpg"), alt: "Lash Lifting Ergebnis" },
+  { src: img("/images/studio-work-4.jpg"), alt: "Wimpernverlängerung Close-up" },
+  { src: img("/images/hero-banner-2.jpg"), alt: "Studio of Glamour München" },
+  { src: img("/images/hero-banner-3.jpg"), alt: "Premium Beauty Studio München" },
 ];
 
 // ── Page ─────────────────────────────────────────────────────────────────────
@@ -99,7 +100,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden">
                 <img
-                  src="/images/studio-work-1.jpg"
+                  src={img("/images/studio-work-1.jpg")}
                   alt="Justine Rollinger — Lash Artist München"
                   className="w-full h-full object-cover"
                 />
@@ -198,7 +199,7 @@ export default function AboutPage() {
         </FadeIn>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {galleryImages.map((img, i) => (
+          {galleryImages.map((photo, i) => (
             <FadeIn key={i} delay={i * 0.08}>
               <div
                 className={`w-full rounded-xl overflow-hidden ${
@@ -206,8 +207,8 @@ export default function AboutPage() {
                 }`}
               >
                 <img
-                  src={img.src}
-                  alt={img.alt}
+                  src={photo.src}
+                  alt={photo.alt}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
