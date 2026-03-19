@@ -35,6 +35,27 @@
   - Максимум 15 строк на запись
 -->
 
+### [S011] — 2026-03-19 — XL: Полный мобильный фикс
+
+**Роли:** #1 Sergei, #2 Lena, #3 Daniel, #7 Emilia, #14 Landa (19 находок)
+**Статус:** завершено
+
+**Что сделано:**
+- P0: Стрипнуты @property (45шт) и @layer (5шт) из CSS — совместимость Safari
+- P0: FadeIn → content visible без JS (useEffect gate)
+- P0: WhatsApp FAB → static fallback до hydration
+- P1: Body scroll lock при hamburger меню
+- P1: Sticky filter bars top-16 (не прячутся за header)
+- P2: Touch targets ≥44px (cart remove, shop filters)
+- P2: Scroll affordance на service tabs (gradient fade)
+- P2: theme-color meta tag
+
+**Верификация на живом сайте:** @property=0, @layer=0, opacity:0=0, theme-color=✅
+
+**Артефакты:** 10 файлов изменены, `scripts/fix-css-compat.mjs` (новый)
+
+---
+
 ### [S010] — 2026-03-19 — Fix: мобильная версия — CSS + visibility
 
 **Роли:** #3 Daniel Kovacs, #14 Landa (6 находок: 2 P0, 2 P1, 2 P2)
