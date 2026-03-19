@@ -35,6 +35,31 @@
   - Максимум 15 строк на запись
 -->
 
+### [S002] — 2026-03-19 — Демо-сайт: 7 страниц + деплой GitHub Pages
+
+**Роли:** #1 Viktor, #2 Lena, #3 Andrei, #5 Marta, #7 Emilia, #14 Landa
+**Статус:** завершено
+
+**Что сделано:**
+- 7 страниц: Home, Services, Booking (3-step wizard), Shop, Academy, About, Contact
+- Дизайн: Quiet Luxury (gold #B8956A / cream #FAF7F2), Playfair Display + Inter
+- Framer Motion анимации: fade-in, parallax, page transitions, cart slide-in
+- Zustand stores: booking wizard state + cart state
+- 20 тестов (data integrity + store logic) — все проходят
+- Deploy: GitHub Pages via Actions — https://aidancompton001.github.io/StudioGlamour/
+
+**Ключевые решения:**
+- Static export (`output: 'export'`) — для GH Pages, без backend
+- Реальные цены клиентки + disclaimer — конкурентное преимущество
+- Sales banner top — "Design Preview — erstellt für Studio of Glamour"
+
+**Артефакты:** 32 файла в `src/`, `.github/workflows/deploy.yml`, `docs/AUDIT.md`
+
+**Следующие шаги:**
+- Показать клиентке демо-URL → собрать обратную связь
+
+---
+
 ### [S001] — 2026-03-19 — Инициализация проекта + аудит сайта клиента
 
 **Роли:** #1 Product Architect
