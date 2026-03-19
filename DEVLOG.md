@@ -35,6 +35,22 @@
   - Максимум 15 строк на запись
 -->
 
+### [S007] — 2026-03-19 — Custom domain + Hero readability fix
+
+**Роли:** #2 Lena Steinbach, #3 Daniel Kovacs, #14 Landa (6 находок)
+**Статус:** завершено
+
+**Что сделано:**
+- Демо передеплоен на `glamour.ais152.com` (CNAME → GH Pages)
+- Убран basePath/assetPrefix (custom domain = корень)
+- Hero overlay усилен в центре (via-charcoal/60) — текст читается
+- Text-shadow: двойная тень на H1 + отдельная для gold italic span
+- Subtitle: opacity 80%→100% + shadow
+
+**Артефакты:** `next.config.ts`, `public/CNAME`, `src/app/page.tsx`, `src/lib/utils.ts`
+
+---
+
 ### [S006] — 2026-03-19 — Fix: image basePath + CI build
 
 **Роли:** #3 Daniel Kovacs, #14 Hans Landa (полный ревью 10 находок)
