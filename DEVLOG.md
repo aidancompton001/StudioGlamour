@@ -35,6 +35,21 @@
   - Максимум 15 строк на запись
 -->
 
+### [S009] — 2026-03-19 — Fix: hero image crop — лого JR видно полностью
+
+**Роли:** #3 Daniel Kovacs, #14 Landa (5 находок)
+**Статус:** завершено
+
+**Что сделано:**
+- Убран `aspect-[4/5]` — source image 16:9, portrait crop обрезал 55%
+- Wrapper: `h-full md:min-h-[500px]` — подстраивается под текст
+- Image: `object-[center_15%]` — фокус на лого, нижний текст допустимо обрезан
+- Mobile: `aspect-[3/2]` — не гигантский portrait блок
+
+**Артефакты:** `src/app/page.tsx`
+
+---
+
 ### [S008] — 2026-03-19 — Hero: split layout (текст лева, image справа)
 
 **Роли:** #2 Lena Steinbach, #14 Landa (11 находок, все адресованы)
