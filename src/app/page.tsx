@@ -73,16 +73,16 @@ const features = [
 
 const testimonials = [
   {
-    quote: "Die besten Wimpern in München! Justine ist eine wahre Künstlerin.",
-    name: "Maria K.",
+    quote: "Hier erscheint eine echte Bewertung Ihrer Kundinnen",
+    name: "⭐⭐⭐⭐⭐ Google Bewertung",
   },
   {
-    quote: "Endlich ein Studio, dem ich vertraue. Natürlicher Look, perfekte Beratung.",
-    name: "Sophie L.",
+    quote: "Echte Erfahrungsberichte schaffen Vertrauen — wir integrieren Ihre besten Reviews",
+    name: "⭐⭐⭐⭐⭐ Instagram Feedback",
   },
   {
-    quote: "Mega Volumen und trotzdem bequem. Ich komme seit 2 Jahren regelmäßig.",
-    name: "Anna B.",
+    quote: "Ihre zufriedenen Kundinnen sind die beste Werbung",
+    name: "⭐⭐⭐⭐⭐ Kundenstimme",
   },
 ];
 
