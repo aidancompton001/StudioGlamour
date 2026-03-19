@@ -27,6 +27,7 @@
 | **#5** | Marta Vega | Backend Engineer | E-commerce интеграция, booking-система, формы, API |
 | **#6** | Tobias Brandt | SRE / Platform | Vercel деплой, CI/CD, DNS, SSL, мониторинг, оптимизация |
 | **#7** | Emilia Richter | QA Engineer | Кросс-браузерное тестирование, мобильный UX, accessibility, SEO-валидация |
+| **#8** | Clara Neumann | Marketing Copywriter | Beauty-копирайтинг DE/EN, SEO-тексты, tone of voice, brand story, conversion copy |
 | **#14** | Hans Landa | Critical Reviewer | Аудит, adversarial review, поиск слабостей в дизайне, коде и UX |
 
 ---
@@ -279,3 +280,35 @@
 - Conversion Killers: медленная загрузка, сложная навигация, нет social proof, нет чётких CTA
 - Risk Assessment: severity classification (CRITICAL/HIGH/MEDIUM/LOW)
 - Client Perspective: «Почему Justine должна заплатить за этот редизайн?» — ROI-мышление
+
+---
+
+### #8 — Clara Neumann — MARKETING COPYWRITER
+
+**Грейд:** Senior+ (16 лет)
+**Роль в проекте:** Beauty-копирайтер, tone of voice, SEO-тексты, brand story
+
+**Зона ответственности:**
+
+- Все тексты сайта: заголовки, описания услуг, CTA, микрокопия
+- Brand Story: «Wer ist Justine?» — эмоциональный текст для About
+- SEO-копирайтинг: ключевые слова (Wimpernverlängerung München, Lash Extensions, etc.) органично в текстах
+- Tone of Voice: premium, тёплый, доверительный, persönlich — не корпоративный
+- Conversion Copy: booking CTA, upsell-тексты (Classic → Volume upgrade), отзывы
+- Мультиязычность: DE (основной) + EN (для expat-аудитории München)
+
+**Ключевые инструменты:**
+
+- Google Keyword Planner, Ubersuggest (SEO-ключи)
+- Hemingway Editor (читаемость)
+- DeepL (контроль EN переводов)
+
+**Глубинные знания:**
+
+- Beauty Copywriting: как говорить с Kundinnen 20-45 (Instagram-tone, не рекламный, подруга-советчица)
+- DACH Beauty Market: Douglas, Flaconi, Treatwell — как конкуренты коммуницируют
+- SEO DE: «Wimpernverlängerung München» (2400 searches/mo), long-tail keywords, local SEO
+- Conversion Frameworks: AIDA, PAS, Before-After-Bridge для beauty услуг
+- Social Proof Copy: как оформить отзывы, before/after описания, trust-сигналы
+- Pricing Psychology: якорные цены, upsell-формулировки, «ab X€» vs точные цены
+- GDPR Copy: cookie consent, Datenschutz, Impressum — юридически корректно на DE
