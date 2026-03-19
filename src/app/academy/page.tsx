@@ -2,7 +2,6 @@
 
 import { courses } from "@/lib/data/products";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { useToast } from "@/components/ui/Toast";
 import Link from "next/link";
 
@@ -15,7 +14,13 @@ const includedItems = [
   "Zertifikat nach Abschluss",
 ];
 
-const cardVariants: Array<"gold" | "rose"> = ["gold", "rose", "gold", "rose", "gold"];
+const courseImages = [
+  { src: "/images/cat-academy.jpg", alt: "Lash Academy Schulung" },
+  { src: "/images/studio-work-1.jpg", alt: "Classic Wimpernverlängerung Kurs" },
+  { src: "/images/studio-work-2.jpg", alt: "Volumen Wimpern Schulung" },
+  { src: "/images/studio-work-3.jpg", alt: "Lash Lifting Kurs" },
+  { src: "/images/studio-work-4.jpg", alt: "Profi Lash Schulung" },
+];
 
 export default function AcademyPage() {
   const { showToast } = useToast();
@@ -63,11 +68,14 @@ export default function AcademyPage() {
             {courses.map((course, index) => (
               <FadeIn key={course.id} delay={index * 0.08}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
-                  <ImagePlaceholder
-                    className="h-48 w-full"
-                    variant={cardVariants[index % 2 === 0 ? 0 : 1]}
-                    text={course.name}
-                  />
+                  <div className="h-48 w-full overflow-hidden">
+                    <img
+                      src={courseImages[index % courseImages.length].src}
+                      alt={courseImages[index % courseImages.length].alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="p-8 flex flex-col flex-1">
                     <div className="flex items-start justify-between gap-3 mb-3">
                       <h2 className="font-heading text-2xl text-charcoal leading-tight">

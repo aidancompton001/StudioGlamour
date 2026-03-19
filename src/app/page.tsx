@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 
 const services = [
   {
@@ -10,18 +9,24 @@ const services = [
     description: "Die zeitlose 1:1 Technik für einen natürlichen, definierten Blick.",
     price: "ab 100 €",
     tag: "Klassisch",
+    image: "/images/studio-work-1.jpg",
+    imageAlt: "Classic Wimpernverlängerung",
   },
   {
     title: "Volume Lashes",
     description: "Maximales Volumen mit feinen Fächern für dramatische Augen.",
     price: "ab 120 €",
     tag: "Volumen",
+    image: "/images/studio-work-2.jpg",
+    imageAlt: "Volumen Wimpernverlängerung",
   },
   {
     title: "Lash Lifting",
     description: "Dauerhaft aufgeweckte Augen – ganz ohne Extensions.",
     price: "ab 65 €",
     tag: "Lifting",
+    image: "/images/studio-work-3.jpg",
+    imageAlt: "Lash Lifting Behandlung",
   },
 ];
 
@@ -85,10 +90,11 @@ export default function HomePage() {
     <>
       {/* ── 1. HERO ───────────────────────────────────────────────── */}
       <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
-        {/* Background image placeholder */}
-        <ImagePlaceholder
-          variant="dark"
-          className="absolute inset-0 w-full h-full"
+        {/* Background image */}
+        <img
+          src="/images/hero-banner.jpg"
+          alt="Studio of Glamour — Premium Wimpernverlängerung München"
+          className="w-full h-full object-cover absolute inset-0"
         />
 
         {/* Dark gradient overlay */}
@@ -157,11 +163,14 @@ export default function HomePage() {
             {services.map((service, i) => (
               <FadeIn key={service.title} delay={i * 0.15}>
                 <div className="group rounded-2xl bg-cream p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                  <ImagePlaceholder
-                    variant="gold"
-                    text={service.tag}
-                    className="h-48 rounded-xl mb-6 w-full"
-                  />
+                  <div className="h-48 rounded-xl mb-6 w-full overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                   <span className="inline-block text-xs font-body font-medium text-gold uppercase tracking-wider mb-2">
                     {service.tag}
                   </span>
@@ -285,7 +294,14 @@ export default function HomePage() {
 
           {/* Instagram grid: 3 cols on mobile, 6 cols on desktop */}
           <div className="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-3 mb-10">
-            {Array.from({ length: 6 }).map((_, i) => (
+            {[
+              { src: "/images/studio-work-1.jpg", alt: "Lash Work — Studio of Glamour" },
+              { src: "/images/studio-work-2.jpg", alt: "Volumen Wimpern — Studio of Glamour" },
+              { src: "/images/studio-work-3.jpg", alt: "Lash Lifting — Studio of Glamour" },
+              { src: "/images/studio-work-4.jpg", alt: "Wimpernverlängerung München" },
+              { src: "/images/hero-banner-2.jpg", alt: "Premium Lash Studio München" },
+              { src: "/images/hero-banner-3.jpg", alt: "Beauty Studio of Glamour" },
+            ].map((img, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <a
                   href="https://instagram.com/studio.of.glamour"
@@ -293,9 +309,11 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="block aspect-square rounded-xl overflow-hidden group"
                 >
-                  <ImagePlaceholder
-                    variant="rose"
-                    className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </a>
               </FadeIn>

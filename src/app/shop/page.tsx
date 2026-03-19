@@ -6,14 +6,6 @@ import { products, productCategories } from "@/lib/data/products";
 import { useCartStore } from "@/lib/store/cart";
 import { useToast } from "@/components/ui/Toast";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
-
-// Map category ids to ImagePlaceholder variants
-function variantForCategory(category: string): "gold" | "rose" | "dark" {
-  if (category === "gift-voucher") return "rose";
-  if (category === "glue" || category === "lash-shampoo") return "dark";
-  return "gold";
-}
 
 // Human-readable label for a category
 function categoryLabel(id: string) {
@@ -102,11 +94,14 @@ export default function ShopPage() {
               >
                 {/* Product image */}
                 <div className="relative">
-                  <ImagePlaceholder
-                    className="h-48 w-full rounded-t-2xl"
-                    variant={variantForCategory(product.category)}
-                    text={product.name}
-                  />
+                  <div className="h-48 w-full rounded-t-2xl overflow-hidden">
+                    <img
+                      src={`/images/product-${products.indexOf(product) + 1}.jpg`}
+                      alt={product.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                   {product.soldOut && (
                     <div className="absolute inset-0 bg-charcoal/50 flex items-center justify-center rounded-t-2xl">
                       <span className="bg-charcoal text-white text-xs font-medium uppercase tracking-widest px-4 py-1.5 rounded-full">

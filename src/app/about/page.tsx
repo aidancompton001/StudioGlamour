@@ -3,7 +3,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 
 // ── Animated counter ────────────────────────────────────────────────────────
 
@@ -65,15 +64,15 @@ function AnimatedCounter({ target, suffix = "", label, delay = 0 }: CounterProps
   );
 }
 
-// ── Gallery variant cycle ────────────────────────────────────────────────────
+// ── Gallery images ────────────────────────────────────────────────────────────
 
-const galleryVariants: Array<"gold" | "rose" | "dark"> = [
-  "gold",
-  "rose",
-  "dark",
-  "rose",
-  "gold",
-  "dark",
+const galleryImages = [
+  { src: "/images/studio-work-1.jpg", alt: "Lash Work — Studio of Glamour" },
+  { src: "/images/studio-work-2.jpg", alt: "Volumen Wimpernverlängerung München" },
+  { src: "/images/studio-work-3.jpg", alt: "Lash Lifting Ergebnis" },
+  { src: "/images/studio-work-4.jpg", alt: "Wimpernverlängerung Close-up" },
+  { src: "/images/hero-banner-2.jpg", alt: "Studio of Glamour München" },
+  { src: "/images/hero-banner-3.jpg", alt: "Premium Beauty Studio München" },
 ];
 
 // ── Page ─────────────────────────────────────────────────────────────────────
@@ -98,11 +97,13 @@ export default function AboutPage() {
           {/* Left — portrait */}
           <FadeIn direction="left">
             <div className="relative">
-              <ImagePlaceholder
-                text="Foto: Justine Rollinger"
-                variant="rose"
-                className="w-full aspect-[3/4] rounded-2xl"
-              />
+              <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden">
+                <img
+                  src="/images/studio-work-1.jpg"
+                  alt="Justine Rollinger — Lash Artist München"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               {/* Decorative corner accent */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold/30 rounded-2xl -z-10" />
             </div>
@@ -197,14 +198,20 @@ export default function AboutPage() {
         </FadeIn>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {galleryVariants.map((variant, i) => (
+          {galleryImages.map((img, i) => (
             <FadeIn key={i} delay={i * 0.08}>
-              <ImagePlaceholder
-                variant={variant}
-                className={`w-full rounded-xl ${
+              <div
+                className={`w-full rounded-xl overflow-hidden ${
                   i === 0 || i === 3 ? "aspect-[4/5]" : "aspect-square"
                 }`}
-              />
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </FadeIn>
           ))}
         </div>
