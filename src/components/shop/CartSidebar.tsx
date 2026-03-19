@@ -71,7 +71,7 @@ export function CartSidebar() {
                       </p>
                       <button
                         onClick={() => removeItem(item.id)}
-                        className="p-1 text-charcoal/30 hover:text-red-500 transition-colors"
+                        className="p-3 text-charcoal/30 hover:text-red-500 transition-colors"
                         aria-label={`${item.name} entfernen`}
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

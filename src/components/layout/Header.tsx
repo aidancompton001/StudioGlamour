@@ -20,6 +20,16 @@ export function Header() {
   const cartCount = useCartStore((s) => s.count());
   const toggleCart = useCartStore((s) => s.toggleCart);
 
+  // Body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+    }
+    return () => { document.documentElement.style.overflow = ""; };
+  }, [menuOpen]);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);

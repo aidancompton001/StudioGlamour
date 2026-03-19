@@ -47,9 +47,10 @@ export default function ServicesPage() {
       </div>
 
       {/* ── Sticky Tab Navigation ── */}
-      <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-cream-dark shadow-sm">
+      <div className="sticky top-16 z-30 bg-white/95 backdrop-blur-md border-b border-cream-dark shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="overflow-x-auto scrollbar-hide">
+          <div className="relative">
+            <div className="overflow-x-auto scrollbar-hide">
             <nav
               className="flex gap-1 min-w-max py-1"
               role="tablist"
@@ -77,6 +78,9 @@ export default function ServicesPage() {
                 );
               })}
             </nav>
+            </div>
+            {/* Scroll affordance: gradient fade on right edge */}
+            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent" />
           </div>
         </div>
       </div>
