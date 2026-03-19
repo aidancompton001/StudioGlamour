@@ -135,11 +135,11 @@ export default function HomePage() {
 
             {/* Right — Image */}
             <FadeIn delay={0.3} direction="right">
-              <div className="w-full h-full aspect-[3/2] md:aspect-auto md:min-h-[500px] overflow-hidden rounded-2xl shadow-xl">
+              <div className="w-full aspect-[3/2] md:aspect-[16/9] overflow-hidden rounded-2xl shadow-xl">
                 <img
                   src={img("/images/hero-banner.jpg")}
                   alt="Studio of Glamour — Premium Wimpernverlängerung München"
-                  className="w-full h-full object-cover object-[center_15%]"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </FadeIn>
