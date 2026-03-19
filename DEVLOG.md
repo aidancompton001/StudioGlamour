@@ -35,6 +35,21 @@
   - Максимум 15 строк на запись
 -->
 
+### [S003] — 2026-03-19 — Fix: CSS не грузился на GitHub Pages
+
+**Роли:** #3 Andrei Voronov (Frontend)
+**Статус:** завершено
+
+**Что сделано:**
+- Диагностика: asset paths начинались с `/_next/` вместо `/StudioGlamour/_next/`
+- Добавлен `basePath` и `assetPrefix` в `next.config.ts`
+
+**Корень проблемы:** GH Pages обслуживает из поддиректории `/StudioGlamour/`, а Next.js по умолчанию генерирует абсолютные пути от `/`
+
+**Артефакты:** `next.config.ts`
+
+---
+
 ### [S002] — 2026-03-19 — Демо-сайт: 7 страниц + деплой GitHub Pages
 
 **Роли:** #1 Viktor, #2 Lena, #3 Andrei, #5 Marta, #7 Emilia, #14 Landa
