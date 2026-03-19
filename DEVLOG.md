@@ -35,6 +35,23 @@
   - Максимум 15 строк на запись
 -->
 
+### [S005] — 2026-03-19 — Реальные фото клиентки на всех страницах
+
+**Роли:** #2 Lena Steinbach (UX/UI)
+**Статус:** завершено
+
+**Что сделано:**
+- 25 фото из old/images/ → public/images/ с чистыми именами
+- Home: hero banner + 3 service cards + 6 Instagram grid
+- Shop: 9 product photos → реальные товары
+- Academy: фото курсов из студии
+- About: портрет + 6-image gallery
+- Все img с немецким alt, loading="lazy" ниже fold
+
+**Артефакты:** `public/images/` (25 файлов), 4 page.tsx обновлены
+
+---
+
 ### [S004] — 2026-03-19 — CSS баг: расследование + кадровые решения
 
 **Роли:** #1 Sergei Volkov, #3 Daniel Kovacs, #14 Hans Landa
